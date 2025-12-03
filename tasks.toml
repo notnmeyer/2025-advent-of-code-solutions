@@ -8,6 +8,6 @@ cmds = ["bun day/{{.CLI_ARGS}}"]
 [tasks.new]
 cmds = [
   "mkdir day/{{.CLI_ARGS}}",
-  "echo 'console.log(\"Hello from day {{.CLI_ARGS}}!\");' > day/{{.CLI_ARGS}}/index.ts",
-  "tsk run -- {{.CLI_ARGS}}",
+  "cp day/00/* day/{{.CLI_ARGS}}/",
+  "tree day/{{.CLI_ARGS}}",
 ]
