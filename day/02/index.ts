@@ -18,7 +18,7 @@ async function run(desc: string, data: string[]) {
     let curr = low;
     while (curr <= high) {
       const numStr = curr.toString();
-      const repeatPattern = /^(\d+?)\1$/;
+      const repeatPattern = /^(\d+)\1+$/;
       if (repeatPattern.test(numStr)) {
         console.log(`pattern found: ${curr}`);
         total += curr;
